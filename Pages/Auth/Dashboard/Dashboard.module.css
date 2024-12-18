@@ -1,0 +1,289 @@
+/* Dashboard.module.css */
+.dashboard {
+  font-family: 'Inter', sans-serif;
+  padding: 40px;
+  background: linear-gradient(135deg, #f0f4f8, #e3e8f1); /* Light gradient background */
+  color: #333; /* Dark text for contrast */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  margin-bottom: 50px ;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2c3e50; /* Dark color for headings */
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+p {
+  color: #7f8c8d; /* Light grey text for general content */
+  font-size: 18px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between; /* Align the items side by side */
+  gap: 30px; /* Space between the items */
+  margin-top: 40px;
+}
+
+.gainLoss,
+.portfolioValue {
+  background: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
+  border-radius: 12px;
+  padding: 30px;
+  width: 48%; /* Ensure they are side by side */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gainLoss h3,
+.portfolioValue h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #e74c3c; /* Red for gain/loss to highlight importance */
+  font-weight: 700; /* Bold for important data */
+}
+
+.gainLoss:hover,
+.portfolioValue:hover {
+  transform: translateY(-8px);
+}
+
+.stockList {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  overflow-y: auto;
+}
+
+.stockItem {
+  background: rgba(255, 255, 255, 0.95); /* Clean, white background for stock items */
+  border-radius: 15px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stockItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.stockItem p {
+  font-size: 18px;
+  color: #34495e; /* Dark grey for text */
+  margin: 12px 0;
+}
+
+.stockItem .highlight {
+  font-weight: bold;
+  color: #3498db; /* Blue to highlight important numbers (e.g., current price) */
+}
+
+.stockItem input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #bdc3c7;
+  border-radius: 10px;
+  color: #333;
+  padding: 12px;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.stockItem input:focus {
+  border-color: #3498db; /* Blue border on focus */
+  outline: none;
+}
+
+button {
+  background-color: #3498db; /* Blue for primary actions */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Slightly darker blue on hover */
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.buyStock {
+  background: rgba(255, 255, 255, 0.9); /* White background for stock buying */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.buyStock input,
+.buyStock button {
+  max-width: 400px;
+  width: 100%;
+  margin: 12px auto;
+}
+
+.buyStock input {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #bdc3c7;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.buyStock input:focus {
+  border-color: #3498db; /* Blue focus for input */
+}
+
+.buyStock button {
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.buyStock button:hover {
+  background-color: #2980b9;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #3498db; /* Blue link color */
+  margin-top: 40px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gainLoss,
+  .portfolioValue {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .stockList {
+    grid-template-columns: 1fr;
+  }
+
+  .buyStock {
+    width: 90%;
+    padding: 25px;
+  }
+}
+/* Dashboard.module.css (add to your existing file) */
+/* Dashboard.module.css (add to your existing file) */
+/* Bottom Navbar CSS */
+.bottomNavbar {
+  display: block; /* Always display for both desktop and mobile */
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottomNavbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bottomNavbar li {
+  text-align: center;
+}
+
+.bottomNavbar a {
+  color: #333;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bottomNavbar a:hover {
+  color: #3498db;
+  transform: translateY(-3px);
+}
+
+.bottomNavbar a.active {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Mobile View Media Query */
+@media (max-width: 768px) {
+  .bottomNavbar {
+    display: fixed; /* Show navbar on mobile */
+  }
+}
+
+.head{
+  background-color: #000000;
+  font-family: cursive;
+  font-size: 2.4em;
+  background: linear-gradient( rgb(3, 80, 151), rgb(28, 89, 202),rgb(243, 135, 135));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+.linnk a{
+  background-color: #3498db; /* Blue for primary actions */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}

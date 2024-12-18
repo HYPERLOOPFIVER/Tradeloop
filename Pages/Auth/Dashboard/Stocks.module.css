@@ -1,0 +1,63 @@
+/* Stocks.module.css */
+.stocksPage {
+    padding: 20px;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .stocksPage h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .stockList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 70vh;  /* Limit the height of the stock list */
+    overflow-y: auto;  /* Enable vertical scrolling if content exceeds max height */
+    width: 100%;
+    padding-right: 10px;  /* Optional: Add space to ensure scroll is visible */
+  }
+  
+  .stockItem {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;  /* Add space between items */
+  }
+  
+  .stockItem h3 {
+    font-size: 20px;
+    color: #3498db;
+  }
+  
+  .stockItem p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .stockItem p:last-child {
+    font-weight: bold;
+    color: #2ecc71;
+  }
+  
+  .head {
+    background-color: #000000;
+    font-family: cursive;
+    font-size: 2.4em;
+    background: linear-gradient(rgb(3, 80, 151), rgb(28, 89, 202), rgb(243, 135, 135));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  

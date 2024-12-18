@@ -1,0 +1,100 @@
+/* HomePage.module.css */
+.homePage {
+  font-family: 'Inter', sans-serif;
+  padding: 40px;
+  background: linear-gradient(135deg, #f0f4f8, #e3e8f1); /* Light gradient background */
+  color: #333; /* Dark text for contrast */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  margin-bottom: 50px ;
+} /* Include padding in height calculation */
+
+
+
+  .greeting {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .greeting h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .greeting p {
+    font-size: 18px;
+    color: #dfe6e9;
+  }
+  
+  .financialStats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .statItem {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .statItem:hover {
+    transform: translateY(-10px);
+  }
+  
+  .statItem h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2f80ed;
+  }
+  
+  .statItem p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .gainLoss {
+    color: #2ecc71; /* Green color for positive gains */
+  }
+  
+  .gainLoss.negative {
+    color: #e74c3c; /* Red color for negative gains */
+  }
+  
+  .portfolioValue {
+    color: #3498db;
+  }
+  
+  .additionalInfo {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .additionalInfo button {
+    padding: 12px 20px;
+    background-color: #2f80ed;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .additionalInfo button:hover {
+    background-color: #56ccf2;
+  }
+  
