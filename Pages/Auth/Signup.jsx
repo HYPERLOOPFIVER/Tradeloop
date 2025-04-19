@@ -14,7 +14,7 @@ const SignUp = () => {
       // Call signUpUser to handle Firebase registration and profile creation
       await signUpUser(email, password, name);
       alert("Sign-Up successful!");
-      navigate("/login"); // Navigate to login page after successful sign-up
+      navigate("/home");; // Navigate to login page after successful sign-up
     } catch (error) {
       alert(error.message); // Handle any errors that occur during sign-up
     }
